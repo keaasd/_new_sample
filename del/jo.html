@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title></head><body></body></html>
+    <h1>Перед началом работы</h1>
+    <h3>Figma</h3> 
+    <ul>
+         <li>Какие шрифты используются в макете <blockquote>Скачать, установить в локально и добавить в body</blockquote> </li>
+         <li>Выбрать переменные для повторяющихся шрифтов 
+             <blockquote>:root { --text-size-medium;}</blockquote>
+            <blockquote>.a {
+                font-size: var(--text-size-medium;)}</blockquote></li>        
+         <li>Подумать варианты адаптива 
+             <blockquote>использовать проценты %, vw, rem</blockquote></li>
+        </ul>
+<h3>Адаптивные размеры</h3>
+<pre> 
+    Мобильный
+        заголовок title =  30px 
+        текст description 12px 
+        между секциями 40px + 20px 
+        logo 96*25px лого
+        button  10px кнопка
+        footer 10px copy копирайт футер
+    планшеты
+=
+</pre>
+    <h3>Размеры экрана</h3>
+    <pre>
+    Минимальная ширина экрана
+        @media (min-width: 1920px)
+        @media (min-width: 1440px)
+        @media (min-width: 960px)
+        
+      планшеты
+        @media (min-width: 768px)
+        
+      смартфоны
+        @media (min-width: 567px)
+        @media (min-width: 480px)
+        @media (min-width: 320px)
+        
+            = max ====================================
+            @media (max-width: 1200px)
+        @media (max-width: 960px)
+        
+            = планшеты
+        @media (max-width: 768px)
+            = смартфоны
+        @media (max-width: 567px)
+        @media (max-width: 480px)
+        @media (max-width: 320px)</pre>
+    
+    шаблоны надо для начала работы
+    чекбокс
+    модалка
+    мобильное меню
+    аккордион 
+html {
+    font-size: 10px;
+    
+    @media (max-width: $r_mob_500) {
+    font-size: 8px;
+}
+      
+body {
+    font-size: 1.6rem;
+}
+      
+    
+
+
+
+
+
+ховер линии
+.nav-items::after {
+    display: block;
+    position: relative;
+    content: "";
+    height: 1px;
+    width: 0;
+    background-color: #2B3541;
+    transition: width .2s ease-in-out, left .5s ease-in-out;
+    left: 0%;
+    bottom: -10px;
+  }
+  .nav-items:hover::after {
+    width: 100%;
+  }
+  
+:nth-child(odd)even {...} нечетные
+
+
