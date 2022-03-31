@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title></head><body></body></html>
+    :root { --text-size-medium;}
+    .a {
+    font-size: var(--text-size-medium;)}
+    ==
+    шаблоны надо для начала работы
+    чекбокс
+    модалка
+    мобильное меню
+    аккордион 
+html {
+    font-size: 10px;
+    
+    @media (max-width: $r_mob_500) {
+    font-size: 8px;
+}
+      
+body {
+    font-size: 1.6rem;
+}
+      
+    = min
+@media (min-width: 1920px)
+@media (min-width: 1440px)
+@media (min-width: 960px)
+
+   = планшеты
+@media (min-width: 768px)
+
+   = смартфоны
+@media (min-width: 567px)
+@media (min-width: 480px)
+@media (min-width: 320px)
+
+    = max
+    @media (max-width: 1200px)
+@media (max-width: 960px)
+
+    = планшеты
+@media (max-width: 768px)
+    = смартфоны
+@media (max-width: 567px)
+@media (max-width: 480px)
+@media (max-width: 320px)
+
+
+
+h2 30px заголовок
+text 12px текст description
+section 60px между секциями
+logo 96*25px лого
+button  10px кнопка
+footer 10px copy копирайт футер
+=
+
+
+ховер линии
+.nav-items::after {
+    display: block;
+    position: relative;
+    content: "";
+    height: 1px;
+    width: 0;
+    background-color: #2B3541;
+    transition: width .2s ease-in-out, left .5s ease-in-out;
+    left: 0%;
+    bottom: -10px;
+  }
+  .nav-items:hover::after {
+    width: 100%;
+  }
+  
+:nth-child(odd)even {...} нечетные
+
+<!-- мобильное меню 1-1 модалка -->
+
+<form action="#" class="modal block_center" >
+    <div class="modal__inner">
+        <button type="button" class="modal__close"></button>
+        <h2 class="modal__header">регистрация</h2>
+        <div class="modal__elements">
+            <div class="modal__item">
+                <input class="modal__input" type="text" placeholder="Ваше имя">
+            </div>
+            <div class="modal__item">
+                <input class="modal__input" type="email" placeholder="e-mail">
+            </div>
+            <div class="modal__item">
+                <input class="modal__input" type="tel" placeholder="номер телефона">
+            </div>
+        </div>
+        <button type="submit">Отправить</button>
+    </div>
+</form>
+<!-- мобильное меню 1-2 css -->
+.block_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-x: auto;
+  padding: 3rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s linear;
+}
+.modal__inner {
+    max-width: 663px;
+    width: 100%;
+    padding: 9rem 9.5rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.modal__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-image: url(../image/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+.modal__elements {
+    margin: 0 auto;
+    max-width: 44.4rem;
+}
+.noscroll {
+    overflow: hidden;
+    height: 100%;
+}
+// modal window
+const modalWindow = document.querySelector('.modal');
+const buttonModals = document.querySelectorAll('.modal__button');
+const modalClose = document.querySelector('.modal__close');
+const body = document.querySelector('body');
+
+
+// по клику по кнопке включаем меню  
+// убираем прокрутку с body 
+buttonModals.forEach((item) => {
+	item.addEventListener('click', () => {
+		// modalWindow.style.display = 'flex', background = `red`;
+		 
+		modalWindow.style.cssText = `	
+		visibility: visible;
+		opacity: 1;
+		`;
+		body.classList.add('noscroll');
+	});
+});
+// закрываем модалку при нажатии вне
+// вернем прокрутку в body  
+modalWindow.addEventListener('click', (e) => {
+	const isModal = e.target.closest('.modal__inner');
+	if (!isModal) {
+	modalWindow.style.cssText = `	
+	visibility: hidden;
+	opacity: 0;
+	`;
+	body.classList.remove('noscroll');
+}
+});
+// по клику на крестик включаем скрол 
+modalClose.addEventListener('click', () => {
+	modalWindow.style.cssText = `	
+	visibility: hidden;
+	opacity: 0;
+	`;
+	body.classList.remove('noscroll');
+})
