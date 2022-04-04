@@ -166,14 +166,16 @@ body {
 <!-- менюшка -->
 <div class="modal__mb" id="modal__mb">
     <div class="modal_window">
-        <button onclick="closeModal()" class="header-modal-close"></button>
+        <div class="modal_box">
+            <div class="modal_logo">d</div>
+            <button onclick="closeModal()" class="header-modal-close"></button>
+        </div>
         <div class="burger-link">
             <a class="modal_link" href="#special">Услуги</a>
             <a class="modal_link" href="#process">Галерея</a>
             <a class="modal_link" href="#comand">Акции</a>
-            <a class="modal_link" href="#com">сертификаты</a>
-            <a class="modal_link" href="#comd">Контакты</a>    
-            <a class="modal_link" href="tel:+74959794772">8 (495) 979 47 72</a>
+            <a class="modal_link" href="#comand">сертификаты</a>
+            <a class="modal_link" href="#comand">Контакты</a>
         </div>
     </div>
 </div>
@@ -185,6 +187,7 @@ close_moby.svg
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
+    border: none;
     background-color: transparent;
     height: 16px;
     width: 24px;
@@ -194,15 +197,12 @@ close_moby.svg
 }
 
  стили крестика ========
-.header-modal-close {
+ .header-modal-close {
     background-image: url(../img/close_moby.svg);
     background-repeat: no-repeat;
-    background-color: transparent;
     background-size: contain;
-    position: absolute;
     border: none;
-    right: 20px;
-    top: 20px;
+    background-color: transparent;
     height: 16.97px;
     width: 16.97px;
 }
@@ -216,23 +216,41 @@ close_moby.svg
       width: 100%;
       background-color: #fff;
       background: rgba(0, 0, 0, 0.59);
+      transition: 0.3s ease-in-out;
       z-index: 10;
   }
   .modal_window {
-      position: relative;
-      background-color: #252525;
-      padding: 113px 20px;      
-      height: 100%;
-      width: 100%;
-      max-width: 229px;
+    position: relative;
+    background-color: #9E9D52;
+    padding: 40px 20px;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
   }
+  .burger-link {
+    margin-top: 30px;
+}
   .modal_link {
+    display: block;
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 136.8%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    text-decoration: none;
     color: #FFFFFF;
+}
+.modal_logo {
+    display: block;
+    background-image: url(../img/logo_mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 40.89px;
+}
+.modal_box {
+    display: flex;
+    justify-content: space-between;      
 }
   <!-- js  -->
   function openModal() {
