@@ -168,10 +168,12 @@ body {
     <div class="modal_window">
         <button onclick="closeModal()" class="header-modal-close"></button>
         <div class="burger-link">
-            <a href="#special">О проекте</a>
-            <a href="#process">Предложения</a>
-            <a href="#comand">Контакты</a>
-            <a href="tel:+74959794772">8 (495) 979 47 72</a>
+            <a class="modal_link" href="#special">Услуги</a>
+            <a class="modal_link" href="#process">Галерея</a>
+            <a class="modal_link" href="#comand">Акции</a>
+            <a class="modal_link" href="#com">сертификаты</a>
+            <a class="modal_link" href="#comd">Контакты</a>    
+            <a class="modal_link" href="tel:+74959794772">8 (495) 979 47 72</a>
         </div>
     </div>
 </div>
@@ -224,6 +226,14 @@ close_moby.svg
       width: 100%;
       max-width: 229px;
   }
+  .modal_link {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 136.8%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
   <!-- js  -->
   function openModal() {
     document.getElementById("modal__mb").style.left = "0px";
