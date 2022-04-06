@@ -1,31 +1,27 @@
 <!-- <form action="send.php" method="post"> -->
-<!-- <form action="send.php" method="post">
+
+
+
+
+<form action="send.php" method="post">
         <input type="email" />
         <input type="text" />
         <button type="submit"></button>
-</form> -->
+</form>
 
 
 $fio = $_POST['fio'];
 $email = $_POST['email'];
-<!-- Первая функция преобразует все символы, которые пользователь попытается добавить в форму: -->
 $fio = htmlspecialchars($fio);
 $email = htmlspecialchars($email);
-<!-- Вторая функция декодирует url, если пользователь попытается его добавить в форму. -->
 $fio = urldecode($fio);
 $email = urldecode($email);
-<!-- Третей функцией мы удалим пробелы с начала и конца строки, если таковые имеются: -->
 $fio = trim($fio);
 $email = trim($email);
-<!-- Для того, чтобы проверить, работает ли этот код, передаются ли данные можно просто их вывести на экран при помощи функции echo: -->
 echo $fio;
 echo "<br>";
 echo $email;
-<!-- mail("на какой адрес отправить", "тема письма", "Сообщение (тело письма)","From: с какого email отправляется письмо \r\n");
-Например, нужно отправить данные на email владельца сайта или менеджера example@mail.ru.
-Тема письма должна быть понятной, а сообщение письма должно содержать то, что указал пользователь в HTML форме. -->
 mail("kea-asd@yandex.ru", "Заявка с сайта", "ФИО:".$fio.". E-mail: ".$email ,"From: example2@mail.ru \r\n");
-<!-- Необходимо добавить условие, которе проверит отправилась ли форма при помощи PHP на указанные адрес электронной почты. -->
 if (mail("example@mail.ru", "Заказ с сайта", "ФИО:".$fio.". E-mail: ".$email ,"From: example2@mail.ru \r\n"))
  {
     echo "сообщение успешно отправлено";
