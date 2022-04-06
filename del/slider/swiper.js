@@ -6,7 +6,7 @@ var swiper = new Swiper(".mySwiper", {
   creativeEffect: {
     prev: {
       shadow: true,
-      translate: [0, 0, -400],
+      // translate: [0, 0, -400],
     },
     next: {
       translate: ["100%", 0, 0],
