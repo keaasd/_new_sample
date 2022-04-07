@@ -36,8 +36,8 @@
         </li>
         <li>
           Выбрать переменные для повторяющихся шрифтов
-          <blockquote>:root { --text-size-medium;}</blockquote>
-          <blockquote>.a { font-size: var(--text-size-medium;)}</blockquote>
+          <blockquote>:root { }</blockquote>
+          <blockquote>.a { }</blockquote>
         </li>
         <li>
           Подумать варианты адаптива
@@ -65,7 +65,20 @@
 
       <h3>Адаптивные размеры</h3>
       <pre>
- 
+ переменные
+ :root {
+    --f-size-s: 11px;
+    --f-size-m: 17px;
+    --f-size-lg: 30px;
+    --f-size-xl: 50px;
+}
+.a { 
+  font-size: var(--f-size-s;)
+  font-size: var(--f-size-m;)
+  font-size: var(--f-size-lg;)
+  font-size: var(--f-size-xl;)
+}
+
  Мобильный
     @media (max-width: 320px)
         заголовок title =  30px 
