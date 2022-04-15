@@ -175,28 +175,93 @@
         </div>
       </div>
     </div>
-    burger_menu.svg close_moby.svg стили бургер-кнопки .burger-btn {
-    background-image: url(../img/burger_menu.svg); background-repeat: no-repeat;
-    background-size: contain; display: block; border: none; background-color:
-    transparent; height: 16px; width: 24px; } .header-burger { display: block; }
-    стили крестика ======== .header-modal-close { background-image:
-    url(../img/close_moby.svg); background-repeat: no-repeat; background-size:
-    contain; border: none; background-color: transparent; height: 16.97px;
-    width: 16.97px; } /* бургер меню */ .modal__mb { position: fixed; top: 0;
-    left: -3000px; height: 100%; width: 100%; background-color: #fff;
-    background: rgba(0, 0, 0, 0.59); transition: 0.3s ease-in-out; z-index: 10;
-    } .modal_window { position: relative; background-color: #9E9D52; padding:
-    40px 20px; height: 100%; width: 100%; max-width: 500px; } .burger-link {
-    margin-top: 30px; } .modal_link { display: block; font-weight: 500;
-    font-size: 1.6rem; line-height: 136.8%; letter-spacing: 0.04em;
-    text-transform: uppercase; text-decoration: none; color: #FFFFFF; }
-    .modal_logo { display: block; background-image: url(../img/logo_mobile.svg);
-    background-size: contain; background-repeat: no-repeat; width: 46px; height:
-    40.89px; } .modal_box { display: flex; justify-content: space-between; }
+    <pre>
+     
+burger_menu.svg close_moby.svg стили бургер-кнопки .burger-btn {
+  background-image: url(../img/burger_menu.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  border: none;
+  background-color:
+    transparent;
+  height: 16px;
+  width: 24px;
+}
+
+.header-burger {
+  display: block;
+}
+
+стили крестика========.header-modal-close {
+  background-image:
+    url(../img/close_moby.svg);
+  background-repeat: no-repeat;
+  background-size:
+    contain;
+  border: none;
+  background-color: transparent;
+  height: 16.97px;
+  width: 16.97px;
+}
+
+/* бургер меню */
+.modal__mb {
+  position: fixed;
+  top: 0;
+  left: -3000px;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  background: rgba(0, 0, 0, 0.59);
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.modal_window {
+  position: relative;
+  background-color: #9E9D52;
+  padding:
+    40px 20px;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+}
+
+.burger-link {
+  margin-top: 30px;
+}
+
+.modal_link {
+  display: block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 136.8%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.modal_logo {
+  display: block;
+  background-image: url(../img/logo_mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 46px;
+  height:
+    40.89px;
+}
+
+.modal_box {
+  display: flex;
+  justify-content: space-between;
+}
     <!-- js  -->
     function openModal() { document.getElementById("modal__mb").style.left =
     "0px"; } function closeModal() {
     document.getElementById("modal__mb").style.left = "-3000px"; }
+    </pre>
 
     <!-- мобильное меню 1-1 модалка -->
 
@@ -222,31 +287,85 @@
         <button type="submit">Отправить</button>
       </div>
     </form>
-    <!-- мобильное меню 1-2 css -->
-    .block_center { display: flex; justify-content: center; align-items: center;
-    flex-direction: column; } .modal { position: fixed; inset: 0; width: 100%;
-    height: 100%; overflow-x: hidden; overflow-x: auto; z-index: 10; padding:
-    3rem 0; background: rgba(0, 0, 0, 0.8); /* display: none; */ } .modal__inner
-    { max-width: 663px; width: 100%; padding: 9rem 9.5rem; background-color:
-    #fff; text-align: center; } .modal__close { position: absolute; top: 30px;
-    right: 30px; display: block; height: 30px; width: 30px; background-image:
-    url(../image/close.svg); background-repeat: no-repeat; background-size:
-    contain; background-color: transparent; .modal__elements { margin: 0 auto;
-    max-width: 44.4rem; } .noscroll { overflow: hidden; height: 100%; } // modal
+    <pre>
+      <!-- мобильное меню 1-2 css -->
+    .block_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-x: auto;
+    z-index: 10;
+    padding:
+      3rem 0;
+    background: rgba(0, 0, 0, 0.8);
+    /* display: none; */
+  }
+  
+  .modal__inner {
+    max-width: 663px;
+    width: 100%;
+    padding: 9rem 9.5rem;
+    background-color:
+      #fff;
+    text-align: center;
+  }
+  
+  .modal__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-image:
+      url(../image/close.svg);
+    background-repeat: no-repeat;
+    background-size:
+      contain;
+    background-color: transparent;
+  
+    .modal__elements {
+      margin: 0 auto;
+      max-width: 44.4rem;
+    }
+  
+    .noscroll {
+      overflow: hidden;
+      height: 100%;
+    }
+   
+    js
+// modal
     window const modalWindow = document.querySelector('.modal'); const
     buttonModals = document.querySelectorAll('.modal__button'); const modalClose
-    = document.querySelector('.modal__close'); const body =
-    document.querySelector('body'); // по клику по кнопке включаем меню //
+        = document.querySelector('.modal__close'); const body =
+            document.querySelector('body'); // по клику по кнопке включаем меню //
     убираем прокрутку с body buttonModals.forEach((item) => {
-    item.addEventListener('click', () => { modalWindow.style.display = 'flex';
-    body.classList.add('noscroll'); }); }); // закрываем модалку при нажатии вне
-    // вернем прокрутку в body modalWindow.addEventListener('click', (e) => {
-    const isModal = e.target.closest('.modal__inner'); if (!isModal) {
-    modalWindow.style.display = 'none'; body.classList.remove('noscroll'); } });
-    // по клику на крестик включаем скрол modalClose.addEventListener('click',
-    () => { modalWindow.style.display = 'none';
-    body.classList.remove('noscroll'); })
-    https://nexoos.ru/moduli/podgruzka-tovarov-po-knopke.html еще Дани модалка
+                item.addEventListener('click', () => {
+                    modalWindow.style.display = 'flex';
+                    body.classList.add('noscroll');
+                });
+            }); // закрываем модалку при нажатии вне
+// вернем прокрутку в body modalWindow.addEventListener('click', (e) => {
+const isModal = e.target.closest('.modal__inner'); if (!isModal) {
+    modalWindow.style.display = 'none'; body.classList.remove('noscroll');
+} });
+// по клику на крестик включаем скрол modalClose.addEventListener('click',
+() => {
+    modalWindow.style.display = 'none';
+    body.classList.remove('noscroll');
+})
+https://nexoos.ru/moduli/podgruzka-tovarov-po-knopke.html еще Дани модалка
+    </pre>
     <button class="modal__btn _modal-open" data-modal-open="modal-1">
       <img src="img/click.svg" alt="" />
       Click me!
