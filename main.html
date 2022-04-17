@@ -1,228 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body {
-            background-color: gray;
-        }
+      body {
+        background-color: gray;
+      }
 
-        .burger-btn__open {
-            background-image: url(../img/burger_menu.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: block;
-            border: none;
-            background-color: transparent;
-            height: 16px;
-            width: 24px;
-        }
+      .burger-btn__open {
+        background-image: url(../img/burger_menu.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        border: none;
+        background-color: transparent;
+        height: 16px;
+        width: 24px;
+      }
 
-        /* кнопка закрыть меню  image/burger_close.svg */
-        .burger-btn__close {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            display: block;
-            height: 30px;
-            width: 30px;
-            border: none;
-            background-image: url(../image/burger_close.svg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-color: transparent;
-        }
+      /* кнопка закрыть меню  image/burger_close.svg */
+      .burger-btn__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        display: block;
+        height: 30px;
+        width: 30px;
+        border: none;
+        background-image: url(../image/burger_close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+      }
 
-        /* бургер меню */
-        .modal__mb {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            height: 100%;
-            width: 100%;
-            background-color: #fff;
-            background: rgba(0, 0, 0, 0.59);
-            transition: 0.3s ease-in-out;
-            z-index: 10;
-        }
+      /* бургер меню */
+      .modal__mb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        background: rgba(0, 0, 0, 0.59);
+        transition: 0.3s ease-in-out;
+        z-index: 10;
+      }
 
-        .modal__mb_window {
-            position: relative;
-            background-color: #9e9d52;
-            padding: 40px 20px;
-            height: 100%;
-            width: 100%;
-            max-width: 500px;
-        }
+      .modal__mb_window {
+        position: relative;
+        background-color: #9e9d52;
+        padding: 40px 20px;
+        height: 100%;
+        width: 100%;
+        max-width: 500px;
+      }
 
-        .burger-link {
-            margin-top: 30px;
-        }
+      .burger-link {
+        margin-top: 30px;
+      }
 
-        .modal_link {
-            display: block;
-            font-weight: 500;
-            font-size: 1.6rem;
-            line-height: 136.8%;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #ffffff;
-        }
+      .modal_link {
+        display: block;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 136.8%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+      }
 
-        .modal_logo {
-            display: block;
-            background-image: url(../img/logo_mobile.svg);
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 46px;
-            height: 40.89px;
-        }
+      .modal_logo {
+        display: block;
+        background-image: url(../img/logo_mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 46px;
+        height: 40.89px;
+      }
 
-        .modal_box {
-            display: flex;
-            justify-content: space-between;
-        }
+      .modal_box {
+        display: flex;
+        justify-content: space-between;
+      }
 
-        .burger_active {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: all;
-            left: 0;
-        }
+      .burger_active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        left: 0;
+      }
 
-        ._locked {
-            overflow: hidden;
-        }
+      ._locked {
+        overflow: hidden;
+      }
 
-        .modal-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            cursor: pointer;
-        }
+      .modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>hello</h1>
-    <button type="button" class="burger-btn__open" data-modal-open="modal-1">х</button>
+    <button type="button" class="burger-btn__open" data-modal-open="modal-1">
+      х
+    </button>
 
     <!-- мобильное меню  -->
     <div class="modal__mb" data-modal="modal-1">
-        <div class="modal__mb_window">
-            <div class="modal_box">
-                <div class="modal_logo"></div>
-                <button type="button" class="burger-btn__close">х</button>
-            </div>
-            <div class="burger-link">
-                <a class="modal_link" href="services.html">Услуги</a>
-                <a class="modal_link" href="gallery.html">Галерея</a>
-                <a class="modal_link" href="offers.html">Акции</a>
-            </div>
+      <div class="modal__mb_window">
+        <div class="modal_box">
+          <div class="modal_logo"></div>
+          <button type="button" class="burger-btn__close">х</button>
         </div>
+        <div class="burger-link">
+          <a class="modal_link" href="services.html">Услуги</a>
+          <a class="modal_link" href="gallery.html">Галерея</a>
+          <a class="modal_link" href="offers.html">Акции</a>
+        </div>
+      </div>
     </div>
     <script>
-        
-            const burgerBtn = document.querySelector(".burger-btn__open");
-            const modalMb = document.querySelector(".modal__mb");
-            const modalMbClose = document.querySelector(".burger-btn__close");
-            const modalWindow = document.querySelector(".modal__mb_window");
-            const body = document.body;
 
-            burgerBtn.addEventListener("click", () => {
-                modalMb.classList.add("burger_active");
-                body.classList.add("_locked");
-            });
-            modalMbClose.addEventListener("click", () => {
-                modalMb.classList.remove("burger_active");
-                body.classList.remove("_locked");
-            });
+      const burgerBtn = document.querySelector(".burger-btn__open");
+      const modalMb = document.querySelector(".modal__mb");
+      const modalMbClose = document.querySelector(".burger-btn__close");
+    //   const modalWindow = document.querySelector(".modal__mb_window");
+      const body = document.body;
 
-            modalWindow.addEventListener("click", (e) => {
-                if (!e.target.classList.contains('modal__mb_window')) {
-                    modalMb.classList.remove("burger_active");
-                    body.classList.remove("_locked");
-                    console.log('e.target: ', e.target);
-                }
-                
-            });
-
-
-            
-
-
-
-            // document.onclick = function(e) {
-            //     if (!e.target.classList.contains('modal__mb_window')) {
-
-            //         modalMb.classList.remove("burger_active");
-            //         body.classList.remove("_locked");
-            //         // if (!e.target.classList.contains('modal__mb_window'))
-
-            //     }; 
-
-
-
-// if ( event.target.className != 'modal__mb_window' ) {
-                // modalMb.classList.remove("burger_active");
-                // body.classList.remove("_locked");
-
-                // const withinBoundaries = e.composedPath().includes(modalWindow);
-                // if ( ! withinBoundaries ) {
-                //     modalMb.classList.remove("burger_active");
-                //     body.classList.remove("_locked");
-
-            // function openModal(elem) {
-            //     elem.classList.add("burger_active");
-            //     body.classList.add("_locked");
-            // }
-
-            // function closeModal(e) {
-            //     if (
-            //         e.target.classList.contains("modal-close") ||
-            //         e.target.closest(".modal-close") ||
-            //         e.target.classList.contains("modal-bg")
-            //     ) {
-            //         e.target.closest("._modal").classList.remove("_active");
-            //         body.classList.remove("_locked");
-            //     }
-
-
-            // modalBtns.forEach((btn) => {
-            //     btn.addEventListener("click", (e) => {
-            //         let data = e.target.dataset.modalOpen;
-
-            //         modals.forEach((modal) => {
-            //             if (
-            //                 modal.dataset.modal == data ||
-            //                 modal.dataset.modal ==
-            //                 e.target.closest("._modal-open").dataset.modalOpen
-            //             ) {
-            //                 openModal(modal);
-            //             }
-            //         });
-            //     });
-            // });
-
-            // modals.forEach((modal) => {
-            //     modal.addEventListener("click", (e) => closeModal(e));
-            // });
-            // // выход по кнопке Escape
-            // window.addEventListener("keydown", (e) => {
-            //     modals.forEach((modal) => {
-            //         if (e.key === "Escape" && modal.classList.contains("_active")) {
-            //             modal.classList.remove("_active");
-            //             body.classList.remove("_locked");
-            //         }
-            //     });
-            // });
-        
+      burgerBtn.addEventListener("click", () => {
+          modalMb.classList.add("burger_active");
+          body.classList.add("_locked");
+      });
+      modalMbClose.addEventListener("click", () => {
+          modalMb.classList.remove("burger_active");
+          body.classList.remove("_locked");
+      });
+      
+    //   function closeModal(e) {
+    //       if
+    //           (e.target.classList.contains('burger-btn__close') ||
+    //           e.target.closest('.burger-btn__close') || e.target.classList.contains('modal__mb_window')) {
+    //           e.target.closest('.modal__mb').classList.remove('burger_active');
+    //           body.classList.remove('_locked');
+    //       }
+    //     }      
     </script>
-</body>
-
+  </body>
 </html>
