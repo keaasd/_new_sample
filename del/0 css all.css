@@ -853,3 +853,6 @@ webkit-text-size-adjust: none;
                     }
 
                 );
+блик градиент
+                background: linear-gradient(-45deg, transparent, rgba(191, 226, 255, 0.3), transparent);
+                transition: left 0.7s;
