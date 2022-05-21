@@ -1,7 +1,7 @@
-@import url("../styles/fonts.css");
+/* @import url("../styles/fonts.css"); */
 
 ::after,
-::before {
+::before, div {
   box-sizing: border-box;
 }
 ::-moz-placeholder, :-moz-placeholder {
@@ -321,21 +321,9 @@ p {
 }
 .header {
   color: #ffffff;
-}
-
-.header_box {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1.4rem 1rem;
-}
-
-.header__bg {
-  background-image: url(../image/header_bg.png);
-  display: block;
-  background-size: contain;
-  height: 568px;
-  background-repeat: no-repeat;
 }
 
 .modal__btn {
