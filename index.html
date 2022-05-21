@@ -16,25 +16,28 @@
   <link rel="stylesheet" href="style/style.css">
   <script defer src="js/index.js"></script>
   <script defer src="js/modal.js"></script>
+  <script defer src="js/btn-up.js"></script>
   <script defer src="js/burger_menu.js"></script>
   <title>Document</title> 
 </head>
 
 <body>
   <h1>hello</h1>
-  <!-- бургер-кнопка -->
   <div class="header">
     <div class="header__logo">
       <img src="image/logo.svg" alt="">
     </div>
     <nav class="navigation">
       <ul class="nav__list">
-        <li class="nav_items"><a class="nav__link" href="#"></a></li>
+        <li class="nav_items"><a class="nav__link" href="#">Контакты</a></li>
       </ul>
     </nav>
+    <!-- бургер-кнопка -->
     <button type="button" class="burger-btn__open"></button>
-  </div>
-
+  </div> 
+  <button class="modal__btn _modal-open" data-modal-open="modal-1">
+    <span>Click me!</span>        
+  </button>
   <!-- мобильное меню  -->
   <div class="modal__mb">
     <div class="modal__mb_window">
@@ -49,7 +52,29 @@
       </div>
     </div>
   </div>
-  
+  <!-- модальное окно -->
+  <div class="_modal" data-modal="modal-1">
+    <div class="modal-bg">
+      <div class="modal-body">
+        <button class="modal-close">
+          <!-- <img src="images/close.svg" alt="" /> -->
+        </button>
+        <div class="modal-content modal-callback">
+          <div class="modal-callback__title">Перезвоните нам!</div>
+          <div class="modal-callback__text">
+            Lorem ipsi nulla itaque provident, minima pariatur repellat
+            harum ad eligendi corrupti suscipit facere fugit nisi. Aut
+            adipisci quidem dignissimos nihil quasi, nemo corrupti recusandae.
+            Rerum molestias voluptates nemo, iusto pariatur, voluptatum
+            similique repellendus architecto inventore amet doloremque non ad
+            magnam aut
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#headerTop" class="to-up">&#8679;</a>
 </body>
 
 </html>

@@ -1,6 +1,14 @@
+@import url("../styles/fonts.css");
+
 ::after,
 ::before {
   box-sizing: border-box;
+}
+::-moz-placeholder, :-moz-placeholder {
+  opacity: 1;
+}
+:focus {
+  outline: 0;
 }
 
 :root {
@@ -10,13 +18,20 @@
 h1 {
   font-size: var(--text-size-mini);
 }
-
+ol,ul{list-style:none;
+  margin: 0;
+  padding: 0;}
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-size: 62.5%;
   /* 16px*0.62.5% = 10px */
   color: #000000;
+  background-color: rgba(0, 0, 0, 0.5);
   font-weight: normal;
   font-family: Montserrat;
+  line-height: 1;
 }
 
 img {
@@ -29,6 +44,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  transition: .3s ease-in-out;
 }
 
 h1,
@@ -41,14 +57,48 @@ h6 {
   margin: 0;
 }
 
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 button,
 input {
   outline: none;
   border: none;
+  padding: 7px 10px;
 }
-
+input,textarea{border-radius:0;-webkit-border-radius:0}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+input {
+  background: rgb(1, 1, 1, .05);
+  width: 100%;
+}
+input:focus {
+  border: none;
+  outline: none;
+  transition: 0.2s ease-in;
+}
+input:invalid {
+  border: red;
+}
 button {
   cursor: pointer;
+  background-color: transparent;
+  transition: .3s ease-in-out;
 }
 
 p {
@@ -60,7 +110,7 @@ p {
   background-size: contain;
   display: block;
   border: none;
-  background-color: transparent;
+  /* background-color: transparent; */
   height: 16px;
   width: 24px;
 }
@@ -89,7 +139,7 @@ p {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 .modal__mb_window {
@@ -134,12 +184,6 @@ p {
   overflow: hidden;
 }
 
-.modal-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  cursor: pointer;
-}
 /* moby-modal-off */
 .header {
   display: flex;
@@ -211,10 +255,17 @@ p {
 .modal-close {
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 35px;
   cursor: pointer;
 }
-
+.modal-close:before, .modal-close:after {
+  content: ""; 
+  position: absolute; 
+  width: 24px; height: 2px; 
+  background: black;
+  right: 0;}
+.modal-close:before {transform: rotate(45deg);}
+.modal-close:after {transform: rotate(-45deg);}
 /* модальное окно конец  */
 /* бургер меню  */
 
@@ -311,6 +362,25 @@ p {
   font-size: 14px;
   line-height: 17px;
   color: #858585;
+}
+.to-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;  
+  background: gray;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  z-index: 5;
+  transform: scale(1);
+  transition: .3s linear;
+  
+}
+.to-up:hover {
+  text-decoration: none;
+  transform: scale(1.2);
 }
 
 /* ку ку  */
