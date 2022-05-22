@@ -9,7 +9,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="style/normalize.css">
@@ -23,11 +22,10 @@
 </head>
 
 <body>
-  <h1>hello</h1>
   <div class="header">
-    <div class="header__logo">
+    <a href="#" class="header__logo">
       <img src="image/logo.svg" alt="">
-    </div>
+    </a>
     <nav class="navigation">
       <ul class="nav__list">
         <li class="nav_items"><a class="nav__link" href="#">Контакты</a></li>
@@ -36,8 +34,9 @@
     <!-- бургер-кнопка -->
     <button type="button" class="burger-btn__open"></button>
   </div> 
+  <h1>Заголовок</h1>
   <button class="modal__btn _modal-open" data-modal-open="modal-1">
-    <span>Click me!</span>        
+    <span>кнопка модалки</span>        
   </button>
   <!-- мобильное меню  -->
   <div class="modal__mb">
