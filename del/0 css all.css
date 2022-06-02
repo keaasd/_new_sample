@@ -856,3 +856,30 @@ webkit-text-size-adjust: none;
 блик градиент
                 background: linear-gradient(-45deg, transparent, rgba(191, 226, 255, 0.3), transparent);
                 transition: left 0.7s;
+
+                
+сафари сбросить инпут
+input,textarea{border-radius:0;-webkit-border-radius:0}
+input{-webkit-appearance:none}
+
+.button
+transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+
+кривая кнопка 
+.slideSix:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: right bottom;
+    transform: skewY(-18deg);
+    background-color: #499BFA;
+}
+
+draggable="true" html - для перетаскивания
+адаптив картинки
+object-fit position
